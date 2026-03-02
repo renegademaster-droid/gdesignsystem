@@ -24,7 +24,11 @@ Julkinen API: [docs/PUBLIC-API.md](docs/PUBLIC-API.md). Kirjaston build: `npm ru
 
 ## Esittelysivu (GitHub Pages)
 
-Esittelysivu julkaistaan GitHub Pagesilla: `npm run deploy`. Repon asetuksissa (Settings → Pages) valitse source: **Deploy from a branch**, branch: **gh-pages**, root: **/ (root)**. Sivu: `https://renegademaster-droid.github.io/gdesignsystem/`.
+**Vaihtoehto A – GitHub Actions (suositus)**  
+Pushaa `main`-haara (tai aja workflow manuaalisesti): Actions buildaa ja deployaa. Repon **Settings → Pages → Build and deployment → Source**: valitse **GitHub Actions**. Sivu: `https://renegademaster-droid.github.io/gdesignsystem/`.
+
+**Vaihtoehto B – gh-pages-haara**  
+Aja paikallisesti: `npm run deploy`. Repon **Settings → Pages**: Source **Deploy from a branch**, branch **gh-pages**, folder **/ (root)**.
 
 ## Figma-tokenien synkaus
 
