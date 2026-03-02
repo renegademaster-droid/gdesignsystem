@@ -10,7 +10,7 @@ Käyttöönotto on kaksi askelta:
 
 1. **Yksi asennuskomento** (projektin juuressa):
    ```bash
-   npm install @gofore/gds @chakra-ui/react @emotion/react next-themes react react-dom
+   npm install @renegademaster-droid/gds @chakra-ui/react @emotion/react next-themes react react-dom
    ```
 
 2. **Yksi kääre koodissa** – kääri sovelluksen juuri `<Provider>`-komponenttiin (esim. `main.tsx` tai `_app.tsx`).
@@ -22,7 +22,7 @@ Sen jälkeen GDS on käytössä: teema (Figma-tokenit), dark/light-väritila, To
 ## Käyttöönotto (koodi)
 
 ```tsx
-import { Provider } from "@gofore/gds"
+import { Provider } from "@renegademaster-droid/gds"
 
 root.render(
   <Provider>

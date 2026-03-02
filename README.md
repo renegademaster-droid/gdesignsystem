@@ -5,13 +5,13 @@ React + TypeScript -pohjainen design system. Tyylit (värit, typografia, spacing
 ## Käyttöönotto toisessa projektissa (npm)
 
 ```bash
-npm install @gofore/gds @chakra-ui/react @emotion/react next-themes react react-dom
+npm install @renegademaster-droid/gds @chakra-ui/react @emotion/react next-themes react react-dom
 ```
 
 Kääri sovelluksen juuri `<Provider>`-komponenttiin:
 
 ```tsx
-import { Provider } from "@gofore/gds"
+import { Provider } from "@renegademaster-droid/gds"
 
 root.render(
   <Provider>

@@ -1,5 +1,5 @@
 {
-  "name": "@gofore/gds",
+  "name": "@renegademaster-droid/gds",
   "private": false,
   "version": "0.1.0",
   "type": "module",
@@ -24,7 +24,8 @@
     "generate:icons": "node scripts/generate-icon-map.js",
     "lint": "eslint .",
     "preview": "vite preview",
-    "sync-figma-tokens": "node scripts/sync-figma-tokens.js"
+    "sync-figma-tokens": "node scripts/sync-figma-tokens.js",
+    "prepublishOnly": "npm run build:lib"
   },
   "dependencies": {
     "@chakra-ui/react": ">=3.0.0",

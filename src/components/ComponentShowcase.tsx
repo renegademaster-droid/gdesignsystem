@@ -227,7 +227,10 @@ const NAV_SECTIONS: { section: string; cards: string[] }[] = [
       "Carousel",
     ],
   },
-  { section: "Button & Link", cards: ["Button", "ButtonGroup", "CloseButton", "Link"] },
+  {
+    section: "Button & Link",
+    cards: ["Button", "IconButton", "ButtonGroup", "CloseButton", "Link"],
+  },
   { section: "Icons (GDS)", cards: ["Icon – Figma-väritokenit"] },
   {
     section: "Form",
@@ -259,6 +262,7 @@ const NAV_SECTIONS: { section: string; cards: string[] }[] = [
       "Badge",
       "Blockquote",
       "Card",
+      "Card with image",
       "Code",
       "Highlight",
       "Image",
@@ -654,6 +658,22 @@ export function ComponentShowcase() {
             </Button>
           </ButtonGroup>
         </ComponentCard>
+        <ComponentCard name="IconButton">
+          <Stack gap="3">
+            <Text textStyle="sm" color="fg.muted">Ikonipainikkeet (brand)</Text>
+            <HStack gap="2">
+              <IconButton aria-label="Haku" variant="ghost" colorPalette="brand" size="sm">
+                <Icon name="search" />
+              </IconButton>
+              <IconButton aria-label="Ilmoitukset" variant="ghost" colorPalette="brand" size="sm">
+                <Icon name="bell" />
+              </IconButton>
+              <IconButton aria-label="Asetukset" variant="ghost" colorPalette="brand" size="sm">
+                <Icon name="settings" />
+              </IconButton>
+            </HStack>
+          </Stack>
+        </ComponentCard>
         <ComponentCard name="CloseButton">
           <CloseButton />
         </ComponentCard>
@@ -1004,6 +1024,40 @@ export function ComponentShowcase() {
               </Card.Root>
             </SimpleGrid>
           </Stack>
+        </ComponentCard>
+        <ComponentCard name="Card with image">
+          <Card.Root maxW="sm" variant="elevated">
+            <Image
+              src="https://picsum.photos/640/360"
+              alt="Card image"
+              w="100%"
+              h="160px"
+              objectFit="cover"
+              roundedTop="lg"
+            />
+            <Card.Header>
+              <Card.Title>Dashboard-kortti</Card.Title>
+              <Card.Description>Projektin kuvaus</Card.Description>
+            </Card.Header>
+            <Card.Body>
+              <Text textStyle="sm" color="fg.muted">
+                Esimerkki kortista, jossa on kuva, otsikko, kuvaus ja toimintopainikkeet.
+              </Text>
+            </Card.Body>
+            <Card.Footer justifyContent="space-between">
+              <Button size="sm" colorPalette="brand">
+                Avaa
+              </Button>
+              <HStack gap="1">
+                <IconButton size="sm" variant="ghost" aria-label="Tykkää">
+                  <Icon name="heart" />
+                </IconButton>
+                <IconButton size="sm" variant="ghost" aria-label="Jaa">
+                  <Icon name="share" />
+                </IconButton>
+              </HStack>
+            </Card.Footer>
+          </Card.Root>
         </ComponentCard>
         <ComponentCard name="Code">
           <Code>code</Code>
