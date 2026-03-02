@@ -1,0 +1,17 @@
+{
+  "extends": "./tsconfig.app.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "types": [],
+    "noEmit": true
+  },
+  "include": [
+    "src/index.ts",
+    "src/theme/**/*",
+    "src/components/ui/provider.tsx",
+    "src/components/ui/color-mode.tsx",
+    "src/components/ui/toaster.tsx",
+    "src/components/icons/**/*"
+  ],
+  "exclude": ["src/main.tsx", "src/App.tsx", "src/components/ComponentShowcase.tsx"]
+}
